@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="80´s studio, neon, He-man">
+    <link rel="icon" type="image/x-icon" href="../media/imgs/he-man-peruecke.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>80´s Studio</title>
+    <link rel="stylesheet" href="./CSS/style.css">    
+</head>
+<body>
+
+    <div class="opening-curtain"></div>
+    <div class="loading">LOADING</div>
+
+    <header id="header">
+        <video class="header-video" autoplay muted loop>
+            <source src="./media/video/Pexels Videos 2759484.mp4?start=0.5&end" type="video/mp4">
+            Video not supported
+        </video>
+        <div class="header-video-overlay">
+            <div class="scale-in">
+            <h1 class="title flicker">80's STUDIO</h1>       
+            </div>
+        </div>          
+    </header>
+
+    <div class="links-wrapper">
+        <ul>
+            <li><a href="#">Hem</a></li>
+            <li><a href="#about-us">Om oss</a></li>
+            <li><a href="#form-section">Kontakt</a></li>
+        </ul>    
+    </div> 
+
+    <section id="hero-section">
+        <div class="hero-overlay">
+            <h2 class="hero-slogan">First there was darkness</h2>
+            <h2 class="hero-slogan-under">then came the 80s</h2>
+        </div>
+    </section>
+    
+    <div id="myModal" class="modal-window">               
+            <span class="close-modal" id="close-my-modal">X</span>
+            <button id="previous-img-btn"><</button>
+            <img src="#" alt="" id="show-big-picture">
+            <button id="next-img-btn">></button>
+            <div id="gallery-pictures-in-modal"></div>
+        
+    </div>
+
+    <section id="img-gallery">
+        
+            <div id="gallery-pictures"></div>
+                
+    </section>
+
+    <section id="info-box">       
+            <div class="info-content"> 
+                <h2>80`s Studio är en sida framtagen utav Kim Jong Jari och hans undersåtar, <br>
+                    inspirerad utav det färgglada 80 talet.</h2>
+            </div>
+    </section>
+
+    <section id="about-us">        
+        <div class="about-us-thumbs"></div>
+    </section>
+
+    <div id="about-modal" class="modal-window">
+        <div class="info-about-us">
+            <div id="card-header">
+            </div>
+            <div id="card-content"></div>
+            <div id="card-footer">
+                <div class="social-contacts">
+                    <a target="_blank" id="facebook"><i class="fa fa-facebook" ></i></a>
+                    <a target="_blank" id="twitter" ><i class="fa fa-twitter"></i></a>                  
+                    <a target="_blank" id="linkedin" ><i class="fa fa-linkedin"></i></a>                                  
+                </div>
+            </div>
+        </div>
+        <div class="close">
+            <span class="close-modal">Close</span>            
+        </div>
+    </div>
+    
+
+    <section id="form-section">
+        
+        <div class="kontakt">
+            <h2>Kontakta oss</h2>
+        </div>
+        <form id="message-form">
+            <div class="lines"> <input id="email" placeholder="E-mail:" required></div>
+            <p id="email-error"></p>
+            <div class="lines"><input id="tema" placeholder="Ämne:" required> </div>
+            <div class="lines">  <textarea id="msg" rows="1" placeholder="Meddelande:" required></textarea></div>
+        </form>
+        <button id="buttonSend">SKICKA</button>
+    </section>
+
+    <div id="animation-wrapper">
+       <div id="content-wrapper">
+           <span class="formsLoader"></span>
+       </div>
+    </div>
+    
+   
+
+    <footer id="footer">
+        <!-- <form action="" id="footer-form"></form> -->
+        <div id ="footer-container">
+            <div class = "footer-marginal" id="footer-adress">
+                <h1>80's STUDIO</h1>
+                <p>box 666</p>
+                <p>616 42 STOCKHOLM</p>
+            </div>
+            <div class = "footer-marginal" id="footer-social-media">
+                <h1>Följ oss här</h1>
+                <div id="footer-place-icons">
+                    <a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" ></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.reddit.com/" target="_blank"><i class="fa fa-reddit"></i></a>
+                </div>
+                </div>
+            <div class = "footer-marginal" id="footer-fun-stuff">
+                <h1>Nej, se det snöar,</h1>
+                <p>nej, se det snöar</p>
+                <p>Det var väl roligt, hurra!</p>
+                <p>Nu blir det vinter, nu blir det vinter</p>
+                <p>Som vi har önskat, hurra!</p>
+            </div>
+            <canvas id="footer-canvas" height="300px" width="2000px" ></canvas>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js"
+        integrity="sha512-I0VFyPo7hdM7YrEbQ0pvX4bX2904k0+B19u/xBrPrQoMprfcSnIDfGFD8kP52GbAhwtDjkEVhXlQvj8+vkJyew==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js"
+    integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw=="
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./JS/app.js"></script>
+</body>
+</html>
